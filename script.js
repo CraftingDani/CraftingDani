@@ -2,7 +2,7 @@
 //Code by CraftingDani
 
 //Scrolls to the top onLoad.
-document.documentElement.scrollTop = 0;
+document.scrollTop = 0;
 
 //Shows the navigation bar.
 window.onscroll = function() {scrollFunction()};
