@@ -1,0 +1,154 @@
+
+/*   en   */
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
+@keyframes loadingBar
+{
+    0%
+    {
+        width: 0;
+        left: 50%;
+        top: 40%;
+        height: 24px;
+        border-radius: 24px;
+        opacity: 100%;
+    }
+    
+    70%
+    {
+        width: 60%;
+        left: 20%;
+        top: 40%;
+        height: 24px;
+        border-radius: 24px;
+        opacity: 100%;
+    }
+    
+    80%
+    {
+        width: 60%;
+        left: 20%;
+        top: 40%;
+        height: 24px;
+        border-radius: 24px;
+        opacity: 100%;
+    }
+
+    90%
+    {
+        width: 100%;
+        left: 0%;
+        top: 0%;
+        height: 100%;
+        border-radius: 0;
+        opacity: 100%;
+    }
+    
+    100%
+    {
+        width: 100%;
+        left: 0%;
+        top: 0%;
+        height: 100%;
+        border-radius: 0;
+        opacity: 0%;
+    }
+}
+
+@keyframes main /* shows the main part */
+{
+    0% { opacity: 0; }
+    99% { opacity: 0; }
+    100% { opacity: 100%; }
+}
+
+@keyframes options-in
+{
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(45deg); }
+}
+
+@keyframes options-out
+{
+    0% { transform: rotate(45deg); }
+    100% { transform: rotate(0deg); }
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #151515;
+}
+
+*
+{
+    font-family: 'Dongle', sans-serif;
+}
+
+#loadingBar
+{
+    background-color: white;
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    animation: loadingBar;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    vertical-align: middle;
+    position: fixed;
+    left: 50%;
+    animation-fill-mode: forwards;
+    z-index: -1;
+}
+
+.main
+{
+    animation: main;
+    animation-duration: 0.05s;
+    color: white;
+    font-family: 'Dongle', sans-serif;
+    font-size: 50px;
+    text-align: center;
+}
+
+.top
+{
+    font-size: 40px;
+    background-color: rgba(15, 15, 15, 0.6);
+    height: 100px;
+    width: 100vw;
+    position: absolute;
+}
+.top a
+{
+    color: white;
+}
+.top a:hover
+{
+    color: #00ccff;
+}
+
+.align
+{
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+#wheel
+{
+    width: 50px;
+    animation-name: options-out;
+    animation-duration: 300ms;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+#wheel:hover
+{
+    animation-name: options-in;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
